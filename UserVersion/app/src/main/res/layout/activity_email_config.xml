@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <com.example.userversion.view.TopBar
+            app:title="@string/mmm"
+            app:isRightShow="false"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/name_info"
+            android:text="@string/enter_right_email"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/name_info2"
+            android:text="@string/have_add"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+        android:id="@+id/name_info3"
+        android:text="@string/most_10"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/name_info4"
+            android:text="@string/least_1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_selector"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_rights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_selector"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

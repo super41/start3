@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <com.example.userversion.view.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:isRightShow="false"
+            app:title="@string/to_manager" />
+
+        <TextView
+            android:id="@+id/name_info"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/cannot_emoty"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/name_info2"
+            android:text="@string/enter_right_email"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/name_info3"
+            android:text="@string/modify_success"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@color/green2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/name_info4"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/title_too_long"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/name_info5"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/too_long_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/pop_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/pg_name" />
+
+                <EditText
+                    android:id="@+id/et_pg_name"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2.5"
+                    android:background="#00000000"
+                    android:digits="@string/support"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:shadowDx="0.0"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="1.0"
+                    android:textColorHint="#ffdddddd" />
+
+                <ImageButton
+                    android:id="@+id/delete_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delet_3" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/textBlueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="-----The WiFi used in the package box-----" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pop_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/wifi_name" />
+
+                <EditText
+                    android:id="@+id/et_wifi_name"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2.5"
+                    android:background="#00000000"
+                    android:digits="@string/support"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:shadowDx="0.0"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="1.0"
+                    android:textColorHint="#ffdddddd" />
+
+                <ImageButton
+                    android:id="@+id/delete_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delet_3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pop_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/wifi_psw" />
+
+                <EditText
+                    android:id="@+id/et_wifi_psw"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2.5"
+                    android:background="#00000000"
+                    android:digits="@string/support"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:shadowDx="0.0"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="1.0"
+                    android:textColorHint="#ffdddddd" />
+
+                <ImageButton
+                    android:id="@+id/delete_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delet_3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pop_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/distance" />
+
+                <EditText
+                    android:id="@+id/et_wifi_distance"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2.5"
+                    android:background="#00000000"
+                    android:imeOptions="actionNext"
+                    android:numeric="integer"
+                    android:shadowDx="0.0"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="1.0"
+                    android:textColorHint="#ffdddddd" />
+                <TextView
+                    android:text="m"
+                    android:textColor="@color/green2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@+id/delete_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delet_3" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/textBlueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="-------The Email Info-------" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pop_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/email" />
+
+                <TextView
+                    android:id="@+id/et_email"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2.5"
+                    android:background="#00000000"
+                    android:ellipsize="middle"
+                    android:shadowDx="0.0"
+                    android:singleLine="true"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="1.0"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    />
+
+                <ImageButton
+                    android:id="@+id/delete_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_more_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pop_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/emial_title" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:counterTextAppearance="@style/textInput"
+                    app:counterOverflowTextAppearance="@style/textError"
+                    android:padding="5dp"
+                    android:layout_weight="2.5">
+                    <EditText
+                        android:id="@+id/et_email_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:layout_gravity="bottom"
+                        android:background="#00000000"
+                        android:digits="@string/support"
+                        android:imeOptions="actionNext"
+                        android:shadowDx="0.0"
+                        android:shadowDy="1.0"
+                        android:shadowRadius="1.0"
+                        android:textColorHint="#ffdddddd" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageButton
+                    android:id="@+id/delete_6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delet_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pop_bg"
+                android:minHeight="120dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textInfoStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingTop="10dp"
+                    android:text="@string/email_content" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30"
+                    app:counterTextAppearance="@style/textInput"
+                    app:counterOverflowTextAppearance="@style/textError"
+                    android:padding="5dp"
+                    android:layout_weight="2.5">
+                <EditText
+                    android:id="@+id/et_email_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:background="#00000000"
+                    android:digits="@string/support"
+                    android:imeOptions="actionDone"
+                    android:shadowDx="0.0"
+                    android:inputType="text"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="1.0"
+                    android:textColorHint="#ffdddddd" />
+</android.support.design.widget.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/delete_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delet_3" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_modify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/btn_blue_selector"
+            android:text="@string/modify"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_transform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_selector"
+            android:text="@string/modify"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

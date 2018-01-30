@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.userversion">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!--Zxing使用到的权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.userversion.activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+     <!--   <activity
+            android:name="com.example.userversion.view.DebugActivity"
+            android:label="debug"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <activity
+            android:name="com.example.userversion.activity.RegisterActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.example.userversion.activity.EnterNumberActivity" />
+        <activity
+            android:name="com.example.userversion.activity.WifiConnectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.userversion.activity.SockeTestActivity"></activity>
+        <activity android:name="com.example.userversion.activity.InfoChangeActivity" />
+        <activity android:name="com.example.userversion.info.SetNameActivity" />
+        <activity android:name="com.example.userversion.info.SetEmailActivity" />
+        <activity android:name="com.example.userversion.info.SetWifiActivity" />
+        <activity android:name="com.example.userversion.info.PackageManagerActivity" />
+        <activity android:name="com.example.userversion.activity.UnLockActivity" />
+        <activity android:name="com.example.userversion.activity.UnLockSuccessActivity" />
+        <activity
+            android:name="com.example.userversion.info.PackageDetailActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name="com.example.userversion.info.SettingActivity" />
+        <activity android:name=".info.EmailConfigActivity" />
+
+        <activity
+            android:name="com.example.userversion.activity.SuccessActivity"
+            android:launchMode="singleTop" />
+
+
+        <!--Zxing相关,注意全类名是否正确！！！-->
+        <activity
+            android:name="com.example.userversion.zxing.android.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+    </application>
+
+</manifest>
