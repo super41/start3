@@ -67,8 +67,8 @@ public class SetNameActivity extends AppCompatActivity {
                     pg.setDistance("2");
                     pg.setWifiId(wifiId);
                     pg.setWifiPsw(wifiPsw);
-                    pg.setEmailTitle("BRIZE BOX");
-                    pg.setEmailContent("Have a nice day");
+                    pg.setEmailTitle(name);
+                    pg.setEmailContent("You Have Received A Delivery");
                     pg.setTime(System.currentTimeMillis());
                     pg.setDelivery(false);
                     pg.save();
@@ -90,7 +90,7 @@ public class SetNameActivity extends AppCompatActivity {
         });
 
         List<Package> mList= DataSupport.findAll(Package.class);
-        et_name.setText("My Home "+(mList.size()+1));
+        et_name.setText("SmartaBox "+(mList.size()+1));
         et_name.requestFocus();
     }
 

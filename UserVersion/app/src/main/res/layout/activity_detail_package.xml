@@ -100,7 +100,7 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="center_vertical"
                     android:text="@string/pg_name" />
 
@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="-----The WiFi used in the package box-----" />
+                android:text="-----WiFi Settings-----" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -147,7 +147,7 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="center_vertical"
                     android:text="@string/wifi_name" />
 
@@ -187,7 +187,7 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="center_vertical"
                     android:text="@string/wifi_psw" />
 
@@ -214,6 +214,13 @@
 
             </LinearLayout>
 
+            <TextView
+                style="@style/textBlueStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="-------Sensitivity-------" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -227,7 +234,7 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="center_vertical"
                     android:text="@string/distance" />
 
@@ -257,12 +264,14 @@
                     android:background="@drawable/delet_3" />
             </LinearLayout>
 
+
+
             <TextView
                 style="@style/textBlueStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="-------The Email Info-------" />
+                android:text="-------Email Settings-------" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -270,6 +279,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:background="@drawable/pop_bg"
                 android:orientation="horizontal">
 
@@ -277,19 +287,20 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="center_vertical"
                     android:text="@string/email" />
 
                 <TextView
                     android:id="@+id/et_email"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="2.5"
                     android:background="#00000000"
                     android:ellipsize="middle"
                     android:shadowDx="0.0"
                     android:singleLine="true"
+                    android:gravity="center_vertical"
                     android:shadowDy="1.0"
                     android:shadowRadius="1.0"
                     android:textSize="18sp"
@@ -317,7 +328,7 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="center_vertical"
                     android:text="@string/emial_title" />
 
@@ -369,7 +380,7 @@
                     style="@style/textInfoStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     android:gravity="left"
                     android:paddingTop="10dp"
                     android:text="@string/email_content" />
@@ -435,10 +446,10 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/btn_blue_selector"
-            android:text="@string/modify"
+            android:text="@string/commit_changes"
             android:textColor="@color/white"
             android:textSize="16sp" />
-
+        <!--android:text="@string/modify"-->
     </LinearLayout>
 
 </LinearLayout>

@@ -16,18 +16,23 @@
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.userversion.activity.MainActivity"
-            android:launchMode="singleTask">
+            android:name="com.example.userversion.activity.WelcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.userversion.activity.MainActivity"
+            android:launchMode="singleTask"
+            />
 
      <!--   <activity
             android:name="com.example.userversion.view.DebugActivity"

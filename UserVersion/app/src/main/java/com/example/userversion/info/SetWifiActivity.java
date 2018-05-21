@@ -87,8 +87,8 @@ public class SetWifiActivity extends AppCompatActivity {
                 pg.setDistance("2");
                 pg.setWifiId(id);
                 pg.setWifiPsw(psw);
-                pg.setEmailTitle("BRIZE BOX");
-                pg.setEmailContent("Have a nice day");
+                pg.setEmailTitle(name);
+                pg.setEmailContent("You Have Received A Delivery");
                 pg.setTime(System.currentTimeMillis());
                 pg.setDelivery(false);
                 pg.save();

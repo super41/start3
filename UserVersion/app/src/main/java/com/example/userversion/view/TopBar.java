@@ -3,6 +3,9 @@ package com.example.userversion.view;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +41,7 @@ public class TopBar extends RelativeLayout {
         mIsLeftbtnShow = typedArray.getBoolean(R.styleable.TopBar_isLeftShow, true);
         mIsRightbtnShow = typedArray.getBoolean(R.styleable.TopBar_isRightShow, true);
         mRightDrawable = typedArray.getResourceId(R.styleable.TopBar_rightDrawable, R.mipmap.ic_launcher);
+
         mTitle=typedArray.getString(R.styleable.TopBar_title);
         //setView
         mBtnTitle.setText(mTitle == null ? "" : mTitle);

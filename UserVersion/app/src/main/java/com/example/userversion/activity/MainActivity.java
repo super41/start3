@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         if(mList == null || mList.size()<1){
             mTopbar.setRightShow(false);
         }else{
-            mTopbar.setRightShow(true);
+            mTopbar.setRightShow(false);  //alawasy gone
         }
     }
 

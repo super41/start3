@@ -117,6 +117,9 @@
     <string name="reason">可能不在范围内或者连接超时</string>
     <string name="unlock_success">开锁成功!</string>
     <string name="please_colse_packae">请靠近包裹箱正前方让包裹箱发现你</string>
+    <string name="commit_changes">提交修改</string>
+    <string name="roufer_ssid">WiFi名称:</string>
+    <string name="roufer_passward">WiFi密码:</string>
 
 
 </resources>

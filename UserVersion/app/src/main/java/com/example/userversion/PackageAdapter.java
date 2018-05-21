@@ -96,7 +96,7 @@ public class PackageAdapter extends RecyclerView.Adapter{
             h.btn_del.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showMessage(mContext, pg.getName(), new DialogInterface.OnClickListener() {
+                    showMessage(mContext, "delete "+pg.getName() + " ?", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             pg.delete();

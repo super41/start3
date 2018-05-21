@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginTop="5dp"
-            android:minWidth="250dp"
+            android:minWidth="280dp"
             android:background="@drawable/pop_bg"
             android:orientation="horizontal">
 
@@ -60,7 +60,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 style="@style/textInfoStyle"
-                android:text="@string/wifi_name"/>
+                android:text="@string/roufer_ssid"/>
 
             <com.example.userversion.view.MyAutoCompleteTextView
                 android:id="@+id/et_name"
@@ -89,12 +89,12 @@
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginTop="5dp"
-            android:minWidth="250dp"
+            android:minWidth="280dp"
             android:background="@drawable/pop_bg"
             android:orientation="horizontal">
             <TextView
                 style="@style/textInfoStyle"
-                android:text="@string/wifi_psw"
+                android:text="@string/roufer_passward"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
