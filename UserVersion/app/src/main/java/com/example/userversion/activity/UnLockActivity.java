@@ -126,7 +126,7 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
 
                 if ((connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED)
                         &&
-                        TextUtils.equals("\"brize_box\"", wifiUtil.getSSID())
+                        TextUtils.equals("\"SmartaBox\"", wifiUtil.getSSID())
                         ){
                     Log.d(TAG, "onClick: connecting pg..."+wifiUtil.getSSID());
                     //连上了，则建立连接
@@ -192,10 +192,10 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
     @Override
     protected void onResume() {
         super.onResume();
-        //如果已经连接WIFI，但是WIFI不是brize_box，断开连接重连
+        //如果已经连接WIFI，但是WIFI不是SmartaBox，断开连接重连
         if(connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED
                 &&
-                !TextUtils.equals("\"brize_box\"", wifiUtil.getSSID())
+                !TextUtils.equals("\"SmartaBox\"", wifiUtil.getSSID())
                 ){
             //断开连接再重连
             Log.d(TAG, "onClick: wifi  reConnecting...");
@@ -312,7 +312,7 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
 
                             Log.i(TAG, "onReceive: " + wifiUtil.getSSID());
                             Log.i(TAG, "onReceive: 已连接");
-                            if (TextUtils.equals("\"brize_box\"", wifiUtil.getSSID())) {
+                            if (TextUtils.equals("\"SmartaBox\"", wifiUtil.getSSID())) {
 
                                 setConnecting(6000);
                                 socketUtil.connect();
