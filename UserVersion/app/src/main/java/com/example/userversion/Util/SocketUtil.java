@@ -27,7 +27,7 @@ public class SocketUtil {
     boolean work = false;
     Activity activity;
     SocketImp socketImp;
-//    private static final String HOST = "172.16.77.1";
+//    private static final String HOST = "192.168.31.93";
     private static final String HOST = "192.168.4.1";
     private static final int PORT = 6341;
     private static final int TIMEOUT = 5000;

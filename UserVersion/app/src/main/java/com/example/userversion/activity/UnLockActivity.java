@@ -132,16 +132,10 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
                     //连上了，则建立连接
                     setConnecting();
                     socketUtil.connect();
-                }else if( connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED ){
-                    Log.d(TAG, "onClick:  wifi reConnecting...");
-                    wifiUtil.removeNowConnectingID();
-                    handler.removeMessages(MSG_CONNECT);
-                    handler.sendMessageDelayed(handler.obtainMessage(MSG_CONNECT),300);
                 }else{
-                    Log.d(TAG, "onClick:  wifi connecting...");
-//                    wifiUtil.removeNowConnectingID();
-                    handler.removeMessages(MSG_CONNECT);
-                    handler.sendMessageDelayed(handler.obtainMessage(MSG_CONNECT),300);
+                    Intent intent = new Intent();
+                    intent.setAction("android.net.wifi.PICK_WIFI_NETWORK");
+                    startActivity(intent);
                 }
 
 
@@ -195,21 +189,12 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
         //如果已经连接WIFI，但是WIFI不是SmartaBox，断开连接重连
         if(connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED
                 &&
-                !TextUtils.equals("\"SmartaBox\"", wifiUtil.getSSID())
+                TextUtils.equals("\"SmartaBox\"", wifiUtil.getSSID())
                 ){
-            //断开连接再重连
-            Log.d(TAG, "onClick: wifi  reConnecting...");
-            wifiUtil.removeNowConnectingID();
-            handler.removeMessages(MSG_CONNECT);
-            handler.sendMessageDelayed(handler.obtainMessage(MSG_CONNECT),300);
-        }else if(connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() != NetworkInfo.State.CONNECTED){
-            //如果没连接，重连
-            Log.d(TAG, "onClick: wifi connecting...");
-//                    wifiUtil.removeNowConnectingID();
-            handler.removeMessages(MSG_CONNECT);
-            handler.sendMessageDelayed(handler.obtainMessage(MSG_CONNECT),300);
+            setConnecting();
+            socketUtil.connect();
         }
-//        handler.sendMessage(handler.obtainMessage(MSG_CONNECT));
+
     }
 
 
@@ -268,9 +253,7 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
 
             switch (intent.getAction()) {
                 case PublicDefine.WIFI_CONNECTTING_ACTION:
-
-                    setConnecting();
-
+//                    setConnecting();
                     break;
 
                 case WIFI_STATE_CHANGE_ACTION:
@@ -299,27 +282,26 @@ public class UnLockActivity extends AppCompatActivity implements SocketUtil.Sock
                     switch (state) {
                         case DISCONNECTING:
                             Log.i(TAG, "onReceive: 正在断开");
+                            btn_retry.setText(getString(R.string.connect_wifi));
                             break;
                         case DISCONNECTED:
                             if (wifiUtil.isOpen()) {
                                 Log.i(TAG, "onReceive: 已经打开,未连接");
                             }
+                            btn_retry.setText(getString(R.string.connect_wifi));
                             break;
                         case CONNECTING:
                             Log.i(TAG, "onReceive: 正在连接");
+                            btn_retry.setText(getString(R.string.connect_wifi));
                             break;
                         case CONNECTED:
 
                             Log.i(TAG, "onReceive: " + wifiUtil.getSSID());
                             Log.i(TAG, "onReceive: 已连接");
                             if (TextUtils.equals("\"SmartaBox\"", wifiUtil.getSSID())) {
-
-                                setConnecting(6000);
-                                socketUtil.connect();
-
-                                Log.d(TAG, "onReceive: connetcd:++");
+                                btn_retry.setText(getString(R.string.connect_socket));
                             } else {
-                               setConnecting(1000);
+                                btn_retry.setText(getString(R.string.connect_wifi));
                             }
                             Log.i("xjp", "onReceive: " + wifiUtil.getSSID());
                             break;
